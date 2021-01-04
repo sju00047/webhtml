@@ -1,0 +1,97 @@
+HTML (HyperText Markup Language)
+- HyperText: 하이퍼텍스트(문서와 문서가 링크로 연결)를 가장 중요한 특징으로 하는
+- Markup: 마크업이라는 형식을 가진
+- Language: 컴퓨터 프로그래밍 언어(약속)
+*Element - 태그
+*Attribute - 속성
+
+<a>element의 attribute
+(1) target: 여는 방식
+(예) target="_blank" : 새 창에서 열기
+(2) title : 설명 추가
+(예) title="전설적인 프로그래머"
+
+*atom 단축키
+[Ctrl] + [Alt] + → : Editing Point 단위 이동
+
+<img>elemetn의 attribute
+(1) alt: 이미지에 대한 이름 부여(alternative text)
+*이미지가 깨졌을 때 이름으로 어떤 이미지였는지 알 수 있음
+(예) alt="산 이미지"
+(2) title: Tool tip을 이용한 설명 제공 (커서를 올리면 설명이 나옴)
+(예) title="산 이미지"
+
+<table>
+<tr>: Table Row
+<td>: Table Data
+<thead>, <tr>: 제목행
+<tbody>, <td>: 컨텐츠행
+<tfoot>, <td>: 마지막행
+*<thead>, <tbody>, <tfoot>은 서로 순서가 바뀌어도 상관없음
+
+<table>element의 attribute
+(1) border: 표 두께 설정
+(예) <table border="1"> 
+
+<td>element의 attribute
+(1) rowspan: 열 병합 (세로)
+(예) <td rowspan="2">: 2개 열 병합
+(2) colspan: 행 병합 (가로)
+(예) <td colspan="3">: 3개 행 병합
+
+<input>element의 attribute
+(1) type
+ 1-1) text: 일반 text창
+ 1-2) password: 점자 처리 text창
+ 1-3) submit: 제출 버튼
+ 1-4) radio: 원형 선택 버튼 (name값을 같이 해줘야 중복이 안 됨)
+ 1-5) reset: <form>태그 안에 속해 있는 모든 입력값 초기화(↔submit)
+ 1-6) hidden: 특별한 UI 없이 Server로 정보를 전달 할 때
+ (예) <input type="hidden" name="hide" value="egoing">
+ 1-7) file: 파일을 선택하여 전송할 수 있는 버튼 생성
+(2) name : 고유 이름 설정
+(예) <input type="text" name="address">
+(3) value: 기본값
+(예) <input type="text" value="default value">
+(4) checked: 기본으로 선택된 값
+(예) <input type="checkbox" value="95" checked>
+
+<form>element의 attribute
+(1) action: submit 버튼을 눌렀을 때 입력한 정보가 가는 URL 설정
+(예) <form action="http://localhost/login.php">
+*주의 - <input type="submit">까지 포함해주어야 함
+(2) method: get과 post 방식을 선택할 수 있다.
+ 2-1) get: submit으로 제출 시 정보가 URL에 노출됨
+ 2-2) post: submit으로 제출 시 정보가 URL에 노출되지 않음(Password 사용시 이용)
+(3) enctype
+(예) <form action="http://~" method="post" enctype="multipart/form-data">
+
+<textarea>elemetn의 attribute
+(1) name: 고유 이름 설정
+(2) rows: 해당 열이 들어갈 만큼 textarea의 크기가 높아짐
+(3) cols: 해당 행이 들어갈 만큼 textarea의 크기가 넓어짐
+(*) 기본 값은 따로 attribut가 없고 textarea 태그 안에 적어주면 됨
+(예) <textarea rows="2" cols="50">default value</textarea>
+
+<select> element의 attribute
+(1) multiple: [Ctrl]을 누르면 다중 선택 가능
+(예) <select name="color2" multiple>
+<option>(DropDown List) element의 attribute
+(1) value: 실제 입력한 label(사람이 보기 좋은 언어)과 다르게 컴퓨터가 보기 좋은 언어로 입력해준다.
+(예) <option value="red">붉은색</option>
+
+<label> element의 attribute
+(1) for: <input>태그 내 id와 동일한 값을 for에 주면 label 효과를 준다
+(예) 
+<label for="id_txt">text</label>
+<input id="id_txt" type="text" name="id" value="default value">
+*label클릭시 해당 text에 커서가 깜빡인다.
+
+<meta> element의 attribute
+(1) charset: 글자 인코딩 형식
+(2) name: 이름 (예) <meta name="description">
+(3) content: 요약 자료
+*name과 content는 검색 시 잘 노출될 수 있도록 해준다.
+(4) keywords: 키워드 (해쉬태그같은 역할)
+(5) author: 저자
+(6) http-equiv
