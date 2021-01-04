@@ -65,6 +65,16 @@ HTML (HyperText Markup Language)
  2-2) post: submit으로 제출 시 정보가 URL에 노출되지 않음(Password 사용시 이용)
 (3) enctype
 (예) <form action="http://~" method="post" enctype="multipart/form-data">
+(4) autocomplete: 자동완성
+(5) placeholder
+(6) autofocus: 가장 처음 커서가 가는 곳
+(7) required: 필수입력사항
+(8) pattern: 요구하는 양식
+*pattern은 정규표현식을 따른다. (한 글자씩 해석)
+- 영문자: [a-zA-Z]
+- 숫자: [0-9]
+- 모든 글자 허용: . (점 하나)
+- 하나 이상: (앞 정규표현식과 붙여) +
 
 <textarea>elemetn의 attribute
 (1) name: 고유 이름 설정
@@ -95,3 +105,5 @@ HTML (HyperText Markup Language)
 (4) keywords: 키워드 (해쉬태그같은 역할)
 (5) author: 저자
 (6) http-equiv
+*mobile 화면으로 보기
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
